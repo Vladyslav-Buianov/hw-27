@@ -1,0 +1,76 @@
+body{
+    font-family: "Playfair Display", serif;
+    background-color: aquamarine;
+}
+
+.box{
+    background-color: gray;
+    height: 550px;
+    width: 350px;
+    padding: 80px;
+    position: absolute;
+    top: 0;
+    left: -315px;
+    transition-property: left opacity;
+    transition-duration: 855ms;
+}
+
+.box:hover{
+    left: 0;
+    .box-title{
+        opacity: 0;
+    }
+}
+
+.box-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box-item{
+    position: relative;
+}
+
+.box-item::before{
+    content: "";
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: orange;
+    border: 2px solid black;
+    position: absolute;
+    top: 8px;
+    left: -25px;
+    transform: rotate(45deg);
+}
+
+.box-link{
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.36;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition-property: color;
+    transition-duration: 350ms;
+}
+
+.box-link:hover{
+    color: orange;
+}
+
+.box-title{
+    color: white;
+    width: 236px;
+    font-size: 22px;
+    font-weight: 290;
+    line-height: 1.26;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: absolute;
+    left: 215px;
+    top: 57%;
+    transform: rotate(90deg);
+    opacity: 1;
+}
